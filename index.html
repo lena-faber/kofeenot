@@ -1,0 +1,1212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aerohinge | The branded laptop wedge buyers actually keep</title>
+    <meta
+      name="description"
+      content="Aerohinge is a compact custom-logo laptop wedge that lifts the screen, helps deflect minor spills, and keeps your brand visible on every desk."
+    />
+    <style>
+      :root {
+        --bg: #000000;
+        --bg-soft: #000000;
+        --panel: rgba(255, 255, 255, 0.03);
+        --panel-strong: rgba(255, 255, 255, 0.05);
+        --text: #ffffff;
+        --muted: #bdbdbd;
+        --line: rgba(255, 255, 255, 0.12);
+        --gold: #00ff00;
+        --gold-strong: #00ff00;
+        --accent: #00ff00;
+        --shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+        --radius-xl: 8px;
+        --radius-lg: 6px;
+        --radius-md: 4px;
+        --max: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle, rgba(255, 255, 255, 0.18) 1px, transparent 1.2px),
+          #000000;
+        background-size: 16px 16px, auto;
+        background-position: 0 0, 0 0;
+      }
+
+      img,
+      video {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page-shell {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .page-shell::before,
+      .page-shell::after {
+        content: "";
+        position: fixed;
+        inset: auto;
+        width: 38rem;
+        height: 38rem;
+        border-radius: 50%;
+        filter: blur(90px);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .page-shell::before {
+        top: -8rem;
+        right: -10rem;
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .page-shell::after {
+        bottom: 10rem;
+        left: -14rem;
+        background: rgba(255, 255, 255, 0.015);
+      }
+
+      .container {
+        width: min(calc(100% - 2rem), var(--max));
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .topbar {
+        padding: 18px 0 10px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding: 14px 18px;
+        padding-right: 11.5rem;
+        border: 1px solid var(--line);
+        background: #000000;
+        backdrop-filter: blur(16px);
+        border-radius: var(--radius-xl);
+        position: relative;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        color: #00ff00;
+      }
+
+      .brand-lockup {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .brand-meta {
+        color: #ffffff;
+        font-size: 0.74rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding-left: 0.9rem;
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .brand img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: var(--radius-md);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.85rem 1.25rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-left: auto;
+}
+
+.nav-cta {
+  display: none;
+}
+
+.top-actions {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  z-index: 1002;
+  pointer-events: auto;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  background: #000000;
+  color: #ffffff;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 4px auto;
+  background: currentColor;
+}
+
+      .hero {
+        padding: 24px 0 56px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 2rem;
+        align-items: start;
+      }
+
+      .hero-bottom {
+        grid-column: 1 / -1;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.85rem;
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: var(--gold-strong);
+        font-size: 0.84rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow strong {
+        color: #ffffff;
+        font-weight: 800;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        margin-top: 0.55rem;
+        font-size: clamp(2.4rem, 6vw, 4.7rem);
+        line-height: 0.95;
+        letter-spacing: -0.02em;
+        max-width: 11ch;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #00ff00;
+      }
+
+      h2,
+      h3 {
+        color: #ffffff;
+      }
+
+      .hero-copy p {
+        margin-top: 1.2rem;
+        max-width: 60ch;
+        font-size: 1.08rem;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .hero-proof {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem;
+        margin-top: 1.2rem;
+      }
+
+      .proof-pill,
+      .detail-pill {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .proof-pill {
+        padding: 0.95rem 1rem;
+        border-radius: var(--radius-lg);
+      }
+
+      .proof-pill strong {
+        display: block;
+        color: #00ff00;
+        font-size: 1.35rem;
+        line-height: 1;
+      }
+
+      .proof-pill span {
+        display: block;
+        margin-top: 0.35rem;
+        color: #ffffff;
+        font-size: 0.82rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .hero-detail-row {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.8rem;
+        color: #00ff00;
+        font-size: 0.84rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .detail-pill {
+        color: inherit;
+      }
+
+      .detail-pill::after {
+        content: "•";
+        margin-left: 0.4rem;
+      }
+
+      .detail-pill:last-child::after {
+        content: "";
+        margin-left: 0;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+        margin-top: 1.7rem;
+      }
+
+      .btn {
+        position: relative;
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0.85rem 1.4rem;
+        border-radius: var(--radius-md);
+        border: 1px solid transparent;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        transition:
+          transform 180ms ease,
+          background 180ms ease,
+          border-color 180ms ease,
+          color 180ms ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-primary {
+        background: #00ff00;
+        color: #000000;
+        box-shadow: none;
+      }
+
+      .btn-primary::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0));
+        transform: translateY(-100%);
+        transition: transform 220ms ease;
+      }
+
+      .btn-primary:hover::before,
+      .btn-primary:focus-visible::before {
+        transform: translateY(100%);
+      }
+
+      .btn-nav {
+        min-height: 42px;
+        padding: 0.7rem 1rem;
+        font-size: 0.88rem;
+      }
+
+      .btn-label {
+        position: relative;
+        z-index: 1;
+      }
+
+      .btn-secondary {
+        border-color: rgba(255, 255, 255, 0.12);
+        background: #000000;
+        color: var(--text);
+      }
+
+      .microproof {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.85rem;
+        margin-top: 1.2rem;
+      }
+
+      .microproof div {
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        font-size: 0.95rem;
+        color: var(--text);
+      }
+
+      .microproof span {
+        display: block;
+        margin-top: 0.28rem;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .hero-media {
+        position: relative;
+        margin-top: -6px;
+        padding-top: 0;
+      }
+
+      .hero-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--radius-xl);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: #000000;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-card img {
+        width: 100%;
+        min-height: 560px;
+        object-fit: cover;
+      }
+
+      .hero-note {
+        position: absolute;
+        right: 1.2rem;
+        bottom: 1.2rem;
+        max-width: 18rem;
+        padding: 1rem 1.1rem;
+        border-radius: var(--radius-md);
+        background: #000000;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(12px);
+      }
+
+      .hero-note strong {
+        display: block;
+        margin-bottom: 0.35rem;
+        font-size: 0.95rem;
+      }
+
+      .hero-note p {
+        font-size: 0.9rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      section {
+        padding: 34px 0 72px;
+      }
+
+      .section-head {
+        max-width: 52rem;
+        margin-bottom: 2rem;
+      }
+
+      .section-head h2 {
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        line-height: 1;
+        letter-spacing: -0.03em;
+      }
+
+      .section-head h2,
+      .cta-panel h2,
+      .card h3,
+      .step-card h3 {
+        color: #ffffff;
+      }
+
+      .section-head p {
+        margin-top: 0.95rem;
+        color: var(--muted);
+        line-height: 1.7;
+        font-size: 1.02rem;
+      }
+
+      .value-grid,
+      .three-col,
+      .spec-grid,
+      .cta-grid {
+        display: grid;
+        gap: 1.2rem;
+      }
+
+      .value-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .card {
+        padding: 1.5rem;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        backdrop-filter: blur(8px);
+      }
+
+      .card h3 {
+        font-size: 1.18rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .card p {
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .card strong.kicker {
+        display: inline-block;
+        margin-bottom: 0.8rem;
+        color: var(--gold-strong);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.76rem;
+      }
+
+      .story-grid {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 1.4rem;
+        align-items: stretch;
+      }
+
+      .media-card {
+        overflow: hidden;
+        min-height: 100%;
+        border-radius: var(--radius-xl);
+        border: 1px solid var(--line);
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      .media-card img,
+      .media-card video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .three-col {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .step-card {
+        position: relative;
+        padding-top: 4rem;
+      }
+
+      .step-num {
+        position: absolute;
+        top: 1.35rem;
+        left: 1.35rem;
+        width: 42px;
+        height: 42px;
+        border-radius: var(--radius-md);
+        display: grid;
+        place-items: center;
+        background: #000000;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: var(--gold-strong);
+        font-weight: 700;
+      }
+
+      .split-panel {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 1.4rem;
+        align-items: start;
+      }
+
+      .bullet-list {
+        display: grid;
+        gap: 0.8rem;
+        margin-top: 1.3rem;
+      }
+
+      .bullet-list div {
+        padding: 0.95rem 1rem;
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: var(--muted);
+      }
+
+      .bullet-list strong {
+        color: var(--text);
+      }
+
+      .spec-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+
+      .spec-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .spec-table th,
+      .spec-table td {
+        padding: 1rem 0;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .spec-table th {
+        width: 34%;
+        color: var(--gold-strong);
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .spec-table td {
+        color: var(--text);
+      }
+
+      .pricing-stack {
+        display: grid;
+        gap: 0.9rem;
+      }
+
+      .price-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: baseline;
+        padding: 1rem 1.1rem;
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .price-row strong {
+        font-size: 1.35rem;
+        color: #00ff00;
+      }
+
+      .price-row span {
+        color: var(--muted);
+        text-align: right;
+        line-height: 1.45;
+      }
+
+      .logo-band {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.2rem;
+      }
+
+      .logo-tile {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        padding: 1rem;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+      }
+
+      .logo-tile img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: var(--radius-md);
+      }
+
+      .logo-tile p {
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .cta-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: stretch;
+      }
+
+      .cta-panel {
+        padding: 2rem;
+        border-radius: var(--radius-xl);
+        background: #000000;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: var(--shadow);
+      }
+
+      .cta-panel p {
+        margin-top: 0.95rem;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .mini-form {
+        display: grid;
+        gap: 0.9rem;
+        margin-top: 1.4rem;
+      }
+
+      .mini-form a {
+        justify-content: center;
+      }
+
+      footer {
+        padding: 0 0 3rem;
+      }
+
+      .footer-bar {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding-top: 1.2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+@media (max-width: 980px) {
+  .nav {
+    padding-right: 18px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 68px;
+    right: 16px;
+    left: auto;
+    width: min(260px, calc(100vw - 1.2rem));
+    padding: 12px 16px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: #000000;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+    z-index: 1001;
+  }
+
+  .nav.nav-open .nav-links {
+    display: flex;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .top-actions {
+    top: 16px;
+    right: 16px;
+  }
+
+        .hero-grid,
+        .story-grid,
+        .split-panel,
+        .spec-grid,
+        .cta-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .microproof,
+        .value-grid,
+        .three-col,
+        .logo-band,
+        .hero-proof {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .hero-card img {
+          min-height: 420px;
+        }
+      }
+
+@media (max-width: 680px) {
+  .container {
+    width: min(calc(100% - 1.2rem), var(--max));
+  }
+
+  .nav {
+    border-radius: var(--radius-xl);
+    padding: 16px;
+    align-items: center;
+    min-height: 76px;
+  }
+
+  .top-actions {
+    gap: 0.35rem;
+  }
+
+  .top-actions .btn-nav {
+    min-height: 40px;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+        .brand-lockup {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.2rem;
+        }
+
+        .brand-meta {
+          font-size: 0.64rem;
+          padding-left: 0;
+          border-left: 0;
+        }
+
+        .hero {
+          padding-top: 10px;
+        }
+
+        .microproof,
+        .value-grid,
+        .three-col,
+        .logo-band,
+        .hero-proof {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-note {
+          position: static;
+          margin: 1rem;
+          max-width: none;
+        }
+
+        h1 {
+          max-width: 12ch;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-shell">
+<header class="topbar">
+  <div class="container">
+    <nav class="nav">
+      <a class="brand" href="#top">
+        <img src="./assets/aerohinge-logo.jpeg" alt="Aerohinge logo" />
+        <span class="brand-lockup">
+          <span>Aerohinge</span>
+          <span class="brand-meta">OEM • Tier-1</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="#why">Why It Sells</a>
+        <a href="#how">How It Works</a>
+        <a href="#branding">Branding</a>
+        <a href="#specs">Specs</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="top-actions">
+  <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <a class="btn btn-primary btn-nav" href="mailto:info@aerohinge.com?subject=Aerohinge%20Pricing%20and%20Sample%20Request&body=Hi%20AeroHinge%2C%0A%0AI%27d%20like%20pricing%20and%20sample%20information%20for%20a%20branded%20AeroHinge%20program.%0A%0AQuantity%3A%0ABranding%20details%3A%0ATimeline%3A%0AShipping%20destination%3A%0A%0AThanks."><span class="btn-label">Request Pricing &amp; Sample</span></a>
+</div>
+
+      <main id="top">
+        <section class="hero">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <div class="eyebrow">California Hub • <strong>1 oz</strong> • Flat-folding</div>
+              <h1>Custom-branded laptop wedge on daily exposure.</h1>
+            </div>
+
+            <div class="hero-media">
+              <div class="hero-card">
+                <img
+                  src="./assets/aerohinge-triad-3.jpg"
+                  alt="Aerohinge supporting laptops and tablets on a desk"
+                />
+                <div class="hero-note">
+                  <strong>A promo product with real staying power</strong>
+                  <p>
+                    It earns desk space by being useful from day one, so the branding
+                    stays in sight instead of disappearing into a drawer.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-bottom">
+              <div class="hero-proof" aria-label="Key product proof points">
+                <div class="proof-pill">
+                  <strong>$20</strong>
+                  <span>Perceived value</span>
+                </div>
+                <div class="proof-pill">
+                  <strong>3.5 years</strong>
+                  <span>Desk retention</span>
+                </div>
+                <div class="proof-pill">
+                  <strong>6-in-1</strong>
+                  <span>Utility</span>
+                </div>
+              </div>
+              <div class="hero-detail-row" aria-label="Secondary product facts">
+                <div class="detail-pill">Pocket-size</div>
+                <div class="detail-pill">Featherweight</div>
+                <div class="detail-pill">No magnets</div>
+                <div class="detail-pill">No adhesives</div>
+              </div>
+              <div class="microproof">
+                <div>
+                  2.0" x 1.6"
+                  <span>Front imprint area</span>
+                </div>
+                <div>
+                  RoHS ABS
+                  <span>High-impact material</span>
+                </div>
+                <div>
+                  $20 sample
+                  <span>Credited toward bulk</span>
+                </div>
+                <div>
+                  5,000+ units
+                  <span>OEM color and branding</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="why">
+          <div class="container">
+            <div class="section-head">
+              <h2>A promo product with real daily use</h2>
+              <p>
+                Most branded giveaways are seen once and forgotten. Aerohinge keeps a
+                laptop at a more useful angle, supports a cleaner desk setup, and gives
+                your client a logo placement that stays visible during everyday work.
+              </p>
+            </div>
+            <div class="value-grid">
+              <article class="card">
+                <strong class="kicker">Easy to explain</strong>
+                <h3>Lift the laptop, improve the setup, show the brand.</h3>
+                <p>
+                  Buyers do not need a complicated pitch. Aerohinge solves a familiar
+                  desk problem and turns that utility into a branded moment.
+                </p>
+              </article>
+              <article class="card">
+                <strong class="kicker">Easy to brand</strong>
+                <h3>Front-facing logo space that works in real use.</h3>
+                <p>
+                  The display panel sits where people can actually see it, making the
+                  imprint more valuable than a logo hidden on the bottom of a gadget.
+                </p>
+              </article>
+              <article class="card">
+                <strong class="kicker">Easy to quote</strong>
+                <h3>Commercial details buyers need, without the guesswork.</h3>
+                <p>
+                  Sample availability, MOQ, volume pricing, and OEM options make it
+                  practical for agencies, company stores, employee kits, and events.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="container story-grid">
+            <div class="media-card">
+              <video controls muted playsinline preload="metadata" poster="./assets/aerohinge-triad-3.jpg">
+                <source src="./assets/aerohinge-demo.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="card" style="padding: 2rem;">
+              <strong class="kicker">Why it earns desk space</strong>
+              <h2 style="font-size: clamp(2rem, 4vw, 3rem); line-height: 1.02;">Three reasons it outperforms ordinary swag</h2>
+              <div class="bullet-list">
+                <div><strong>Raises the laptop</strong><br />Creates a more comfortable viewing angle for everyday work and hybrid setups.</div>
+                <div><strong>Helps manage small spills</strong><br />The incline can redirect liquid away from flat exposure situations and buy valuable reaction time.</div>
+                <div><strong>Displays the brand</strong><br />The logo stays in the workstation view instead of living on packaging or a giveaway item that gets lost.</div>
+              </div>
+              <p style="margin-top: 1.2rem; color: var(--muted); line-height: 1.6;">
+                Aerohinge is a spill-mitigation accessory, not a waterproof device. That makes
+                the story believable, useful, and easy for procurement teams to approve.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="how">
+          <div class="container">
+            <div class="section-head">
+              <h2>Fast setup, no extras required</h2>
+              <p>
+                Keep the explanation simple. Aerohinge works because the user understands
+                it instantly: open the laptop, place it at the hinge, and start working.
+              </p>
+            </div>
+            <div class="three-col">
+              <article class="card step-card">
+                <div class="step-num">1</div>
+                <h3>Open the laptop</h3>
+                <p>Position the screen past the hinge angle and get the device ready to rest on the wedge.</p>
+              </article>
+              <article class="card step-card">
+                <div class="step-num">2</div>
+                <h3>Place Aerohinge at the rear hinge</h3>
+                <p>The mechanical form is designed to work with common laptop hinge formats without adhesives or magnets.</p>
+              </article>
+              <article class="card step-card">
+                <div class="step-num">3</div>
+                <h3>Lift and work</h3>
+                <p>The laptop rises into a better desk angle while the front panel keeps the branding in clear view.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="branding">
+          <div class="container split-panel">
+            <div class="card" style="padding: 2rem;">
+              <strong class="kicker">Made for branded programs</strong>
+              <h2 style="font-size: clamp(2rem, 4vw, 3rem); line-height: 1.02;">Built for merch buyers, onboarding kits, and OEM projects</h2>
+              <p style="margin-top: 1rem; color: var(--muted); line-height: 1.75;">
+                Aerohinge gives you something most desk accessories do not: a clean
+                front-facing logo zone tied to a product people actually use. That makes
+                it a stronger fit for employee gifting, reseller programs, conference kits,
+                company stores, and custom branded tech bundles.
+              </p>
+              <div class="bullet-list">
+                <div><strong>Custom logo decoration</strong><br />Designed for front-facing brand visibility in everyday use.</div>
+                <div><strong>Blank units available</strong><br />Easy to sample before committing to a full branded run.</div>
+                <div><strong>OEM options for larger runs</strong><br />Custom color and expanded branding conversations available at higher volumes.</div>
+              </div>
+            </div>
+            <div class="logo-band">
+              <article class="logo-tile">
+                <img src="./assets/i-love-sf.png" alt="Aerohinge branded with I love SF graphic" />
+                <p><strong>Branded close-up:</strong> a clean imprint example that shows how the front panel can carry a bold, giftable design.</p>
+              </article>
+              <article class="logo-tile">
+                <img src="./assets/aerohinge-logo.jpeg" alt="Aerohinge product close-up with placeholder branding" />
+                <p><strong>Premium finish:</strong> use close product photography to signal quality before buyers even reach the specs.</p>
+              </article>
+              <article class="logo-tile">
+                <img src="./assets/aerohinge-posture.jpg" alt="Comparison image showing laptop posture improvement" />
+                <p><strong>Utility story:</strong> visual proof of a better desk angle helps agencies explain the value in one sentence.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="specs">
+          <div class="container">
+            <div class="section-head">
+              <h2>Simple to source</h2>
+              <p>
+                This is the information a promo or procurement buyer wants when they are
+                ready to quote: volume, price signal, timing, footprint, and branding details.
+              </p>
+            </div>
+            <div class="spec-grid">
+              <article class="card">
+                <table class="spec-table">
+                  <tbody>
+                    <tr>
+                      <th>MOQ</th>
+                      <td>100 units</td>
+                    </tr>
+                    <tr>
+                      <th>Sample</th>
+                      <td>$20 evaluation sample, credited toward bulk order</td>
+                    </tr>
+                    <tr>
+                      <th>Lead time</th>
+                      <td>In-stock: 24-48h | OEM: 18-24 days</td>
+                    </tr>
+                    <tr>
+                      <th>Material</th>
+                      <td>RoHS-compliant high-impact ABS</td>
+                    </tr>
+                    <tr>
+                      <th>Folded size</th>
+                      <td>3.4&quot; L x 2.4&quot; W x 0.4&quot; H</td>
+                    </tr>
+                    <tr>
+                      <th>Unit weight</th>
+                      <td>0.06 lb</td>
+                    </tr>
+                    <tr>
+                      <th>Branding area</th>
+                      <td>2.0&quot; x 1.6&quot; front-facing imprint zone</td>
+                    </tr>
+                    <tr>
+                      <th>Shipping</th>
+                      <td>California fulfillment hub | Global DAP/DDP available on request</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <aside class="pricing-stack">
+                <article class="card">
+                  <strong class="kicker">Volume pricing</strong>
+                  <div class="price-row">
+                    <strong>$6</strong>
+                    <span>100-unit case<br />Shipping included in the U.S.</span>
+                  </div>
+                  <div class="price-row">
+                    <strong>$5</strong>
+                    <span>500-unit master case<br />Priority shipping available</span>
+                  </div>
+                  <div class="price-row">
+                    <strong>$4</strong>
+                    <span>1,000 units<br />Freight options available</span>
+                  </div>
+                  <div class="price-row">
+                    <strong>Custom</strong>
+                    <span>5,000+ units<br />OEM color and branding</span>
+                  </div>
+                </article>
+                <article class="card">
+                  <strong class="kicker">Buyer note</strong>
+                  <p>
+                    Lead with the use case first, then show these numbers. Price works
+                    better once the buyer already understands why this is more valuable
+                    than generic desk swag.
+                  </p>
+                </article>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="container">
+            <div class="cta-grid">
+              <article class="cta-panel" id="contact">
+                <strong class="kicker">Ready to quote</strong>
+                <h2 style="font-size: clamp(2rem, 4vw, 3rem); line-height: 1.02;">Ready to price Aerohinge for a client?</h2>
+                <p>
+                  Request a quote, ask for a sample, or start an OEM conversation. This
+                  page is built to help a promo buyer move from interest to action without
+                  digging through a technical dossier first.
+                </p>
+                <div class="cta-row">
+                  <a class="btn btn-primary" href="mailto:partners@aerohinge.com?subject=Request%20Pricing%20for%20Aerohinge">Request Pricing</a>
+                  <a class="btn btn-secondary" href="mailto:partners@aerohinge.com?subject=Ask%20About%20OEM%20Aerohinge">Ask About OEM</a>
+                </div>
+              </article>
+              <article class="card" style="padding: 2rem;">
+                <strong class="kicker">Fast next steps</strong>
+                <h3 style="font-size: 1.5rem;">What to send a buyer</h3>
+                <div class="mini-form">
+                  <a class="btn btn-secondary" href="mailto:partners@aerohinge.com?subject=Sample%20Request%20for%20Aerohinge">Get sample information</a>
+                  <a class="btn btn-secondary" href="mailto:partners@aerohinge.com?subject=Bulk%20Pricing%20Request%20for%20Aerohinge">Request volume pricing</a>
+                  <a class="btn btn-secondary" href="https://aerohinge.com/" target="_blank" rel="noreferrer">View current Aerohinge site</a>
+                </div>
+                <p style="margin-top: 1.2rem; color: var(--muted); line-height: 1.6;">
+                  For a production launch, I’d recommend adding a short quote form,
+                  downloadable spec sheet, and two or three cleaner branding mockups next.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container footer-bar">
+          <span>Aerohinge landing page concept for promo and procurement buyers</span>
+          <span>Core message: visible branding, real utility, easy quoting</span>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const nav = document.querySelector(".nav");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelectorAll(".nav-links a");
+
+      if (nav && menuToggle) {
+        menuToggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("nav-open");
+          menuToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            nav.classList.remove("nav-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
