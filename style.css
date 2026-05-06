@@ -129,6 +129,17 @@ a {
   font-weight: 800;
 }
 
+/* Make the tagline look professional and technical */
+.brand-lockup span:last-child {
+  color: var(--muted); /* Use that #bdbdbd you defined earlier */
+  font-size: 0.85rem;   /* Smaller than the logo */
+  font-weight: 400;     /* Normal weight, not bold */
+  letter-spacing: 0.02em;
+  text-transform: none; /* Keep it readable */
+  opacity: 0.8;         /* Soften it further */
+}
+
+
 .brand-lockup {
   display: inline-flex;
   align-items: center;
