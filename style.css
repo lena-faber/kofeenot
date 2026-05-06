@@ -130,7 +130,7 @@ a {
 }
 
 .brand-logo {
-  height: 1.15rem; /* This matches your previous 1.45rem font-size exactly */
+  height: 1.0rem; /* This matches your previous 1.45rem font-size exactly */
   width: auto;     /* Keeps the proportions correct */
   display: block;  /* Removes weird baseline spacing */
 }
