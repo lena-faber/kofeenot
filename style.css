@@ -129,11 +129,6 @@ a {
   font-weight: 800;
 }
 
-a.brand .brand-lockup img.brand-logo {
-  height: 52px !important; 
-  width: auto !important;
-}
-
 .brand-lockup {
   display: inline-flex;
   align-items: center;
