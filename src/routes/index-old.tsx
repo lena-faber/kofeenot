@@ -360,7 +360,7 @@ function Home() {
         <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { vol: "2-Unit Gift Box", price: "$30", detail: "US shipping included", sub: "Credited toward OEM order", cta: "Buy now", action: "sample" as const, source: "price-2pack" },
-            { vol: "20 Gift Boxes Pack", price: "$480", detail: "Event-ready bulk", sub: "", cta: "Buy now", action: "sample" as const, source: "price-20pack" },
+            { vol: "20 2-Unit Gift Boxes", price: "$480", detail: "Event-ready bulk", sub: "", cta: "Buy now", action: "sample" as const, source: "price-20pack" },
             { vol: "Min Order", price: "Bulk OEM", detail: "1 Pack (100 Units) or 1 Master Case (400 Units / 25 lb)", sub: "Ships blank for custom branding", cta: "Request Pricing", action: "quote" as const, source: "price-oem", featured: true },
             { vol: "OEM Manufacturing • Private Label • Licensing", price: "Enterprise", detail: "", sub: "", cta: "Request Quote", action: "quote" as const, source: "price-enterprise" },
           ].map((p, i) => (
