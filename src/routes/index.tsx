@@ -380,7 +380,8 @@ function Home() {
         </Reveal>
         <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { vol: "2-Unit Gift Box", price: "$30", detail: "US shipping included", sub: "Credited toward OEM order", cta: "Buy now", action: "url" as const, source: "price-2pack", url: "https://buy.stripe.com/fZufZg5YqbWA3g4gcsdUY0B" },
+            { vol: "2-Unit Gift Box", price: "$30", detail: "US shipping included • Professional evaluation set
+Gift-ready packaging", sub: "Credited toward OEM order", cta: "Buy now", action: "url" as const, source: "price-2pack", url: "https://buy.stripe.com/fZufZg5YqbWA3g4gcsdUY0B" },
             { vol: "20 2-Unit Gift Boxes min", price: "$480", detail: "Pre-packed in 2-unit gift boxes •
 Ideal for corporate gifting", sub: "Expedited shipping available", cta: "Buy now", action: "url" as const, source: "price-20pack", url: "https://buy.stripe.com/00w3cu4Um8Ko7wk0dudUY0C" },
             { vol: "1 pack or 1 case min", price: "Bulk OEM", detail: "100-Unit Pack or 400 Units Master Case (25 lb)", sub: "Ships raw for custom branding", cta: "Request Pricing", action: "quote" as const, source: "price-oem", featured: true },
