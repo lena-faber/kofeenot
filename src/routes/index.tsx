@@ -379,21 +379,50 @@ function Home() {
           <p className="text-muted-foreground mt-3">24-48h dispatch • FOB SF Bay Area, CA, US</p>
         </Reveal>
         <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            {
-  vol: "2-Unit Gift Box",
-  price: "$30",
-  detail: "US shipping included • Professional evaluation set • Gift-ready packaging",
-  sub: "Credited toward OEM order",
-  cta: "Buy now",
-  action: "url" as const,
-  source: "price-2pack",
-  url: "https://buy.stripe.com/fZufZg5YqbWA3g4gcsdUY0B"
-},
-            { vol: "20 2-Unit Gift Boxes min", price: "$480", detail: "Pre-packed in 2-unit gift boxes • Ideal for corporate gifting", sub: "Expedited shipping available", cta: "Buy now", action: "url" as const, source: "price-20pack", url: "https://buy.stripe.com/00w3cu4Um8Ko7wk0dudUY0C" },
-            { vol: "1 pack or 1 case min", price: "Bulk OEM", detail: "100-Unit Pack or 400 Units Master Case (25 lb)", sub: "Ships raw for custom branding", cta: "Request Pricing", action: "quote" as const, source: "price-oem", featured: true },
-            { vol: "OEM Manufacturing • Private Label • Licensing", price: "Enterprise", detail: "Full Pantone color matching • Custom logo molding & tooling • Bespoke retail-ready packaging", sub: "Global DDP freight & Logistics", cta: "Request Quote", action: "quote" as const, source: "price-enterprise" },
-          ].map((p, i) => (
+  {[
+    {
+      vol: "2-Unit Gift Box",
+      price: "$30",
+      detail:
+        "US shipping included • Professional evaluation set • Gift-ready packaging",
+      sub: "Credited toward OEM order",
+      cta: "Buy now",
+      action: "url" as const,
+      source: "price-2pack",
+      url: "https://buy.stripe.com/fZufZg5YqbWA3g4gcsdUY0B",
+    },
+    {
+      vol: "20 2-Unit Gift Boxes min",
+      price: "$480",
+      detail:
+        "Pre-packed in 2-unit gift boxes • Ideal for corporate gifting",
+      sub: "Expedited shipping available",
+      cta: "Buy now",
+      action: "url" as const,
+      source: "price-20pack",
+      url: "https://buy.stripe.com/00w3cu4Um8Ko7wk0dudUY0C",
+    },
+    {
+      vol: "1 pack or 1 case min",
+      price: "Bulk OEM",
+      detail: "100-Unit Pack or 400 Units Master Case (25 lb)",
+      sub: "Ships raw for custom branding",
+      cta: "Request Pricing",
+      action: "quote" as const,
+      source: "price-oem",
+      featured: true,
+    },
+    {
+      vol: "OEM Manufacturing • Private Label • Licensing",
+      price: "Enterprise",
+      detail:
+        "Full Pantone color matching • Custom logo molding & tooling • Bespoke retail-ready packaging",
+      sub: "Global DDP freight & Logistics",
+      cta: "Request Quote",
+      action: "quote" as const,
+      source: "price-enterprise",
+    },
+  ].map((p, i) => (
             <Reveal key={p.vol} delay={i * 0.05}>
               <div className={`rounded-sm p-6 h-full flex flex-col ${p.featured ? "neon-border bg-[rgba(0,255,0,0.06)] neon-glow" : "panel panel-hover"}`}>
                 <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{p.vol}</div>
