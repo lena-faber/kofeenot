@@ -97,7 +97,13 @@ function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-black/60" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-[1320px] px-4 lg:px-6 pt-8 pb-8 lg:pt-10 lg:pb-10 pointer-events-auto flex flex-col">
+        <div className="absolute right-0 top-24 bottom-20 z-20 hidden lg:flex items-center border-l border-white/20 bg-black/45 px-2 backdrop-blur-sm pointer-events-none">
+          <span className="[writing-mode:vertical-rl] rotate-180 text-[11px] uppercase tracking-[0.35em] font-black text-white">
+            No Magnets • No Adhesives
+          </span>
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-[1320px] px-4 lg:px-6 pt-8 pb-28 lg:pt-10 lg:pb-24 pointer-events-auto flex flex-col lg:min-h-[680px]">
           {/* Eyebrow */}
           <Reveal>
             <div className="inline-block px-5 py-2.5 border border-white/15 bg-black/40 backdrop-blur-sm">
@@ -116,18 +122,33 @@ function Home() {
             </h1>
           </Reveal>
 
-          {/* Chip */}
+          {/* Mobile Chip */}
           <Reveal delay={0.1}>
-            <div className="mt-6 inline-block">
+            <div className="mt-6 inline-block lg:hidden">
               <span className="text-[11px] uppercase tracking-[0.22em] font-black text-white">
                 No Magnets • No Adhesives
               </span>
             </div>
           </Reveal>
 
-          {/* Stat cards */}
+          {/* CTAs */}
           <Reveal delay={0.15}>
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl">
+            <div className="relative z-20 mt-8 flex flex-wrap items-center gap-5 pointer-events-auto">
+              <button
+                onClick={() => setVideoOpen(true)}
+                className="group flex items-center gap-4 text-white font-black uppercase tracking-[0.18em] text-base md:text-lg transition hover:text-red-100"
+              >
+                <span className="flex h-16 w-24 items-center justify-center rounded-2xl bg-red-600 shadow-[0_0_34px_rgba(220,38,38,0.55)] transition group-hover:scale-105 group-hover:bg-red-500">
+                  <Play className="ml-1 h-8 w-8 fill-white text-white" />
+                </span>
+                Watch 2-Sec Setup
+              </button>
+            </div>
+          </Reveal>
+
+          {/* Stat cards */}
+          <Reveal delay={0.2}>
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl lg:absolute lg:bottom-20 lg:left-6 lg:mt-0">
               {[
                 { big: "1 oz", small: "Flat-Folding", greenSmall: false },
                 { big: "365 days", small: "Presence", greenSmall: false },
@@ -149,23 +170,10 @@ function Home() {
               ))}
             </div>
           </Reveal>
-
-          {/* CTAs */}
-          <Reveal delay={0.2}>
-            <div className="relative z-20 mt-8 flex flex-wrap items-center gap-8 pointer-events-auto">
-              <button
-                onClick={() => setVideoOpen(true)}
-                className="flex items-center gap-3 text-[color:var(--neon)] font-black uppercase tracking-[0.18em] text-base md:text-lg hover:opacity-80 transition"
-              >
-                <Play className="h-6 w-6 fill-current" />
-                Watch 2-Sec Setup
-              </button>
-            </div>
-          </Reveal>
         </div>
 
         {/* Floating right-side overlay */}
-        <div className="hidden lg:block absolute bottom-20 right-6 z-20 max-w-xs bg-black/85 backdrop-blur-sm border border-white/10 p-5 pointer-events-auto">
+        <div className="hidden lg:block absolute bottom-20 right-14 z-20 max-w-xs bg-black/85 backdrop-blur-sm border border-white/10 p-5 pointer-events-auto">
           <div className="text-white font-bold text-base leading-snug">A promo product with real staying power</div>
           <p className="mt-2 text-sm text-muted-foreground leading-snug">Daily utility keeps the product and your branding in constant view.</p>
         </div>
