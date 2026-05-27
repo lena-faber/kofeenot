@@ -97,7 +97,7 @@ function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-black/60" />
         </div>
 
-        <div className="absolute right-0 top-24 bottom-20 z-20 hidden lg:flex items-center border-l border-white/20 bg-black/45 px-2 backdrop-blur-sm pointer-events-none">
+        <div className="absolute right-0 top-24 bottom-2 z-20 hidden lg:flex items-center border-l border-white/20 bg-black/45 px-2 backdrop-blur-sm pointer-events-none">
           <span className="[writing-mode:vertical-rl] rotate-180 text-[11px] uppercase tracking-[0.35em] font-black text-white">
             No Magnets • No Adhesives
           </span>
@@ -148,7 +148,7 @@ function Home() {
 
           {/* Stat cards */}
           <Reveal delay={0.2}>
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl lg:absolute lg:bottom-20 lg:left-6 lg:mt-0">
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl lg:absolute lg:bottom-2 lg:left-6 lg:mt-0">
               {[
                 { big: "1 oz", small: "Flat-Folding", greenSmall: false },
                 { big: "365 days", small: "Presence", greenSmall: false },
@@ -173,7 +173,7 @@ function Home() {
         </div>
 
         {/* Floating right-side overlay */}
-        <div className="hidden lg:block absolute bottom-20 right-14 z-20 max-w-xs bg-black/85 backdrop-blur-sm border border-white/10 p-5 pointer-events-auto">
+        <div className="hidden lg:block absolute bottom-2 right-14 z-20 max-w-xs bg-black/85 backdrop-blur-sm border border-white/10 p-5 pointer-events-auto">
           <div className="text-white font-bold text-base leading-snug">A promo product with real staying power</div>
           <p className="mt-2 text-sm text-muted-foreground leading-snug">Daily utility keeps the product and your branding in constant view.</p>
         </div>
