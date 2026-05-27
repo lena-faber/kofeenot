@@ -111,7 +111,7 @@ function Home() {
           <Reveal delay={0.05}>
             <h1 className="mt-8 text-6xl md:text-7xl lg:text-8xl font-black italic leading-[0.95] tracking-tight neon-text drop-shadow-[0_0_30px_rgba(0,255,0,0.35)]">
               Ultimate<br />
-             Laptop<br />
+             Laptop/Phone<br />
               Wedge
             </h1>
           </Reveal>
