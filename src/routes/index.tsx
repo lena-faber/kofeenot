@@ -189,7 +189,7 @@ function Home() {
       {/* WHY */}
       <section id="why" className="mx-auto max-w-[1320px] px-4 lg:px-6 py-20">
         <Reveal>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight">Why Promo Buyers Choose <span className="neon-text">KOFEᵉ̬NOT</span></h2>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight">Why Promo Buyers Choose <span className="neon-text">KOFEᴉ̬NOT</span></h2>
           <p className="text-muted-foreground mt-3">Six reasons this scales fast</p>
         </Reveal>
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -325,7 +325,7 @@ function Home() {
           <Reveal delay={0.1}>
             <div className="panel rounded-sm overflow-hidden h-full flex flex-col">
               <div className="bg-black flex-1 flex items-center justify-center min-h-0">
-                <img src={brand} alt="Branded Kofeᵉ̬not" className="w-full h-full object-contain" />
+                <img src={brand} alt="Branded Kofeᴉ̬not" className="w-full h-full object-contain" />
               </div>
               <div className="p-4 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
                 Ships Blank / Ready for Decoration
@@ -379,50 +379,47 @@ function Home() {
           <p className="text-muted-foreground mt-3">24-48h dispatch • FOB SF Bay Area, CA, US</p>
         </Reveal>
         <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-  {[
-    {
-      vol: "2-Unit Gift Box",
-      price: "$30",
-      detail:
-        "US shipping included • Professional evaluation set • Gift-ready packaging",
-      sub: "Credited toward OEM order",
-      cta: "Buy now",
-      action: "url" as const,
-      source: "price-2pack",
-      url: "https://buy.stripe.com/fZufZg5YqbWA3g4gcsdUY0B",
-    },
-    {
-      vol: "20 2-Unit Gift Boxes min",
-      price: "$480",
-      detail:
-        "Pre-packed in 2-unit gift boxes • Ideal for corporate gifting",
-      sub: "Expedited shipping available",
-      cta: "Buy now",
-      action: "url" as const,
-      source: "price-20pack",
-      url: "https://buy.stripe.com/00w3cu4Um8Ko7wk0dudUY0C",
-    },
-    {
-      vol: "1 pack or 1 case min",
-      price: "Bulk OEM",
-      detail: "100-Unit Pack or 400 Units Master Case (25 lb)",
-      sub: "Ships raw for custom branding",
-      cta: "Request Pricing",
-      action: "quote" as const,
-      source: "price-oem",
-      featured: true,
-    },
-    {
-      vol: "OEM Manufacturing • Private Label • Licensing",
-      price: "Enterprise",
-      detail:
-        "Full Pantone color matching • Custom logo molding & tooling • Bespoke retail-ready packaging",
-      sub: "Global DDP freight & Logistics",
-      cta: "Request Quote",
-      action: "quote" as const,
-      source: "price-enterprise",
-    },
-  ].map((p, i) => (
+          {[
+            {
+              vol: "2-Unit Gift Box",
+              price: "$30",
+              detail: "US shipping included • Professional evaluation set • Gift-ready packaging",
+              sub: "Credited toward OEM order",
+              cta: "Buy now",
+              action: "url" as const,
+              source: "price-2pack",
+              url: "https://buy.stripe.com/fZufZg5YqbWA3g4gcsdUY0B",
+            },
+            {
+              vol: "20 2-Unit Gift Boxes min",
+              price: "$480",
+              detail: "Pre-packed in 2-unit gift boxes • Ideal for corporate gifting",
+              sub: "Expedited shipping available",
+              cta: "Buy now",
+              action: "url" as const,
+              source: "price-20pack",
+              url: "https://buy.stripe.com/00w3cu4Um8Ko7wk0dudUY0C",
+            },
+            {
+              vol: "1 pack or 1 case min",
+              price: "Bulk OEM",
+              detail: "100-Unit Pack or 400 Units Master Case (25 lb)",
+              sub: "Ships raw for custom branding",
+              cta: "Request Pricing",
+              action: "quote" as const,
+              source: "price-oem",
+              featured: true,
+            },
+            {
+              vol: "OEM Manufacturing • Private Label • Licensing",
+              price: "Enterprise",
+              detail: "Full Pantone color matching • Custom logo molding & tooling • Bespoke retail-ready packaging",
+              sub: "Global DDP freight & Logistics",
+              cta: "Request Quote",
+              action: "quote" as const,
+              source: "price-enterprise",
+            },
+          ].map((p, i) => (
             <Reveal key={p.vol} delay={i * 0.05}>
               <div className={`rounded-sm p-6 h-full flex flex-col ${p.featured ? "neon-border bg-[rgba(0,255,0,0.06)] neon-glow" : "panel panel-hover"}`}>
                 <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{p.vol}</div>
@@ -431,22 +428,21 @@ function Home() {
                 {p.sub && <p className="text-xs text-muted-foreground mt-2">{p.sub}</p>}
                 <div className="flex-1" />
                 <Button
-  onClick={() => {
-    // If it's the $30 card, open in new tab
-    if (p.source === "price-2pack" && p.url) {
-      window.open(p.url, "_blank", "noopener,noreferrer");
-    } 
-    // Otherwise, use your original logic
-    else if (p.action === "url" && p.url) {
-      openCheckout(p.url);
-    } else if (p.action === "quote") {
-      openQuote(p.source);
-    }
-  }}
-  className="mt-5 bg-[color:var(--neon)] text-black hover:bg-[color:var(--neon-dim)] font-bold"
->
-  {p.cta}
-</Button>
+                  onClick={() => {
+                    if (p.source === "price-2pack" && p.url) {
+                      window.open(p.url, "_blank", "noopener,noreferrer");
+                      return;
+                    }
+                    if (p.action === "url" && p.url) {
+                      setCheckoutUrl(p.url);
+                      return;
+                    }
+                    openQuote(p.source);
+                  }}
+                  className="mt-5 bg-[color:var(--neon)] text-black hover:bg-[color:var(--neon-dim)] font-bold"
+                >
+                  {p.cta}
+                </Button>
               </div>
             </Reveal>
           ))}
@@ -454,8 +450,8 @@ function Home() {
 
         <div className="mt-8 grid md:grid-cols-2 gap-4 items-stretch">
           {[
-            { img: giftBox, c: "KOFEᵉ̬NOT in gift box" },
-            { img: masterCase, c: "KOFEᵉ̬NOT pack in master case" },
+            { img: giftBox, c: "KOFEᴉ̬NOT in gift box" },
+            { img: masterCase, c: "KOFEᴉ̬NOT pack in master case" },
           ].map((g) => (
             <div key={g.c} className="panel rounded-sm overflow-hidden flex flex-col">
               <div className="bg-black flex-1">
