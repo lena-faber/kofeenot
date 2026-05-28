@@ -86,7 +86,7 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section ref={heroRef} className="relative isolate overflow-hidden bg-black -mt-16 pt-16">
+      <section ref={heroRef} className="relative isolate min-h-screen overflow-hidden bg-black -mt-16 pt-16">
         {/* Background product image */}
         <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
           <img
@@ -97,16 +97,16 @@ function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-black/60" />
         </div>
 
-        <div className="absolute right-0 top-24 bottom-20 z-20 hidden lg:flex items-center border-l border-white/20 bg-black/45 px-2 backdrop-blur-sm pointer-events-none">
+        <div className="absolute right-0 top-20 bottom-10 z-20 hidden lg:flex items-center border-l border-white/20 bg-black/45 px-2 backdrop-blur-sm pointer-events-none">
           <span className="[writing-mode:vertical-rl] rotate-180 text-[11px] uppercase tracking-[0.35em] font-black text-white">
             No Magnets • No Adhesives
           </span>
         </div>
 
-        <div className="relative z-10 mx-auto max-w-[1320px] px-4 lg:px-6 pt-8 pb-28 lg:pt-10 lg:pb-24 pointer-events-auto flex flex-col lg:min-h-[680px]">
+        <div className="relative z-10 mx-auto max-w-[1320px] px-4 lg:px-6 pt-5 pb-8 lg:pt-6 lg:pb-8 pointer-events-auto flex min-h-[calc(100vh-112px)] flex-col">
           {/* Eyebrow */}
           <Reveal>
-            <div className="inline-block px-5 py-2.5 border border-white/15 bg-black/40 backdrop-blur-sm">
+            <div className="inline-block px-5 py-2 border border-white/15 bg-black/40 backdrop-blur-sm">
               <span className="text-[11px] uppercase tracking-[0.22em] font-black text-white">
                 OEM / White-Label Ready • IP Holder • FOB California
               </span>
@@ -115,7 +115,7 @@ function Home() {
 
           {/* Headline */}
           <Reveal delay={0.05}>
-            <h1 className="mt-8 text-6xl md:text-7xl lg:text-8xl font-black italic leading-[0.95] tracking-tight neon-text drop-shadow-[0_0_30px_rgba(0,255,0,0.35)]">
+            <h1 className="mt-4 text-6xl md:text-7xl lg:text-8xl font-black italic leading-[0.9] tracking-tight neon-text drop-shadow-[0_0_30px_rgba(0,255,0,0.35)]">
               ULTIMATE<br />
              LAPTOP<br />
               WEDGE
@@ -124,7 +124,7 @@ function Home() {
 
           {/* CTAs */}
           <Reveal delay={0.1}>
-            <div className="relative z-20 mt-8 flex flex-wrap items-center gap-5 pointer-events-auto">
+            <div className="relative z-20 mt-4 flex flex-wrap items-center gap-4 pointer-events-auto">
               <button
                 onClick={() => setVideoOpen(true)}
                 className="group flex items-center gap-4 text-white font-black uppercase tracking-[0.18em] text-base md:text-lg transition hover:text-red-100"
@@ -139,7 +139,7 @@ function Home() {
 
           {/* Mobile Chip */}
           <Reveal delay={0.15}>
-            <div className="mt-6 inline-block lg:hidden">
+            <div className="mt-3 inline-block lg:hidden">
               <span className="text-[11px] uppercase tracking-[0.22em] font-black text-white">
                 No Magnets • No Adhesives
               </span>
@@ -148,7 +148,7 @@ function Home() {
 
           {/* Stat cards and promo */}
           <Reveal delay={0.2}>
-            <div className="mt-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div className="mt-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl">
                 {[
                   { big: "1 oz", small: "Flat-Folding", greenSmall: false },
