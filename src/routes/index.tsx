@@ -86,7 +86,7 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section ref={heroRef} className="relative isolate min-h-screen overflow-hidden bg-black -mt-16 pt-16">
+      <section ref={heroRef} className="relative isolate overflow-hidden bg-black -mt-16 pt-16">
         {/* Background product image */}
         <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
           <img
@@ -103,7 +103,7 @@ function Home() {
           </span>
         </div>
 
-        <div className="relative z-10 mx-auto max-w-[1320px] px-4 lg:px-6 pt-5 pb-8 lg:pt-6 lg:pb-8 pointer-events-auto flex min-h-[calc(100vh-112px)] flex-col">
+        <div className="relative z-10 mx-auto max-w-[1320px] px-4 lg:px-6 pt-5 pb-8 lg:pt-6 lg:pb-8 pointer-events-auto flex flex-col lg:min-h-[620px]">
           {/* Eyebrow */}
           <Reveal>
             <div className="inline-block px-5 py-2 border border-white/15 bg-black/40 backdrop-blur-sm">
