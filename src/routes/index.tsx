@@ -148,7 +148,7 @@ function Home() {
 
           {/* Stat cards */}
           <Reveal delay={0.2}>
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl lg:absolute lg:bottom-5 lg:left-6 lg:mt-0">
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl">
               {[
                 { big: "1 oz", small: "Flat-Folding", greenSmall: false },
                 { big: "365 days", small: "Presence", greenSmall: false },
